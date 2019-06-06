@@ -1,0 +1,81 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+@import "glyphter";
+
+body {
+    font-family: $font;
+}
+
+/* texts */
+h1 {
+    color: $grey1;
+    font-size: $title;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: $grey1;
+    font-size: $title;
+    font-weight: 700;
+}
+
+p {
+    color: $black;
+    font-size: $sidebar-link;
+    font-weight: 300;
+}
+
+/* link */
+a {
+    color: $blue;
+    font-size: $title;
+    font-weight: 300;
+    &:hover {
+        color: $yellow;
+        cursor: pointer;
+    }
+}
+
+/* button */
+.btn {
+    width: 93px;
+    height: 40px;
+    border-radius: 3px;
+    color: $white;
+    border: none;
+}
+
+.grey {
+    @extend .btn;
+    background: $grey1;
+    &:hover {
+        background: $grey2;
+        cursor: pointer;
+    }
+}
+
+.orange {
+    @extend .btn;
+    background: $orange;
+    &:hover {
+        background: $yellow;
+        cursor: pointer;
+    }
+}
+
+button[disabled] {
+    width: 203px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    background: $grey3;
+    .icon-links {
+        width: 16px;
+        height: 8px;
+        margin-right: 18px;
+        color: white;
+    }
+}
